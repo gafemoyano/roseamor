@@ -1,0 +1,58 @@
+@import "colors";
+
+/* ==========================================================================
+Global Styles
+========================================================================== */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: $Dark-primary;
+  overflow-x: hidden;
+}
+hr {
+  border-color: #24242a;
+  border-width: 3px;
+  max-width: 50px;
+}
+hr.light {
+  border-color: white;
+}
+a {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  color: #24242a;
+}
+a:hover,
+a:focus {
+  color: #0c0c0f;
+}
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.bg-primary {
+  background-color: #24242a;
+}
+.bg-dark {
+  background-color: #222222;
+  color: white;
+}
+.text-faded {
+  color: rgba(255, 255, 255, 0.7);
+}
+section {
+  padding: 100px 0;
+}
+aside {
+  padding: 50px 0;
+}
+aside h2,
+aside p {
+  color: #eeeeee;
+}
+.no-padding {
+  padding: 0;
+}

@@ -1,0 +1,35 @@
+@import 'colors';
+/* ==========================================================================
+Footer Map Style
+========================================================================== */
+
+footer {
+  background: $section-dark;
+  padding: $section-padding;
+  text-align: center;
+  h1 {
+    text-transform: uppercase;
+    font-weight: $bold;
+  }
+  .social {
+    margin: 40px 0;
+    a {
+      color: $Light-primary;
+      margin-left: 20px;
+      margin-right: 20px;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      color: $Grey-Primary;
+    }
+  }
+  h6 {
+    text-transform: uppercase;
+    color: $Light-primary;
+  }
+}
