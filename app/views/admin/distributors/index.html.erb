@@ -1,0 +1,42 @@
+<h3 style="color: black">Distributors</h3>
+<div class="admin-separator"></div>
+<%= link_to 'New', new_admin_distributor_path, class: 'btn btn-dark' %>
+<section class="admin-section">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Country</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Phone2</th>
+          <th>Phone3</th>
+          <th>Email</th>
+          <th>Website</th>
+          <th>Address</th>
+          <th>Logo</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @distributors.each do |distributor| %>
+            <tr>
+              <td><%= distributor.country_name %></td>
+              <td><%= distributor.name %></td>
+              <td><%= distributor.phone %></td>
+              <td><%= distributor.phone2 %></td>
+              <td><%= distributor.phone3 %></td>
+              <td><%= distributor.mail %></td>
+              <td><%= distributor.website %></td>
+              <td><%= distributor.address %></td>
+              <td><%= link_to image_tag(distributor.logo.url(:thumb), class: 'img-responsive'), distributor.logo.url, target: '_blank' %></td>
+              <td>
+                <%= link_to 'Edit', edit_admin_distributor_path(distributor), class: 'btn btn-default' %>
+                <%= link_to 'Destroy', admin_distributor_path(distributor), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+</section>

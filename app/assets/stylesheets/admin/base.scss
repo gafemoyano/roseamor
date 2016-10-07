@@ -1,0 +1,56 @@
+.admin-main {
+  padding: 1rem 0;
+}
+
+.admin-section {
+  padding: 4rem 0;
+}
+.admin-separator {
+  border: solid #DDDDDD;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+  margin: 1.25rem 0 1.1875rem;
+}
+
+.side-nav {
+  display: block;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !important;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-top: 0.5rem;
+  background: #fafafa;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.sidebar {
+  background: #FAFAFA;
+  padding: 32px 20px;
+}
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6 {
+  padding: 4px 0px;
+  font-size: 0.77778rem;
+  font-weight: bold;
+}
+
+.sidebar .side-nav li.active > a:first-child {
+  font-weight: bold;
+  color: #008eba;
+  position: relative;
+  margin: 0 -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: rgba(0, 64, 84, 0.05);
+}
+.side-nav li a:not(.button) {
+  color: #008CBA;
+  display: block;
+  padding: 0.38889rem 1.77778rem;
+  margin: 0 -20px;
+}
+.side-nav li a {
+  color: #008CBA;
+  display: block;
+  padding: 0.38889rem 1.77778rem;
+  margin: 0 -20px;
+}

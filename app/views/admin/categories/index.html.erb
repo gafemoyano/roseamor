@@ -1,0 +1,24 @@
+<h3 style="color: black">Categories</h3>
+<div class="admin-separator"></div>
+<%= link_to 'New', new_admin_category_path, class: 'btn btn-dark' %>
+<section class="admin-section">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-default'  %>
+            <%= link_to 'Destroy', admin_category_path(category), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+          </td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</section>

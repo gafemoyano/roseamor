@@ -36,6 +36,12 @@ App
 @import 'base';
 @import 'colors';
 
+/* ==========================================================================
+Admin Styles
+========================================================================== */
+
+@import 'admin/base';
+
 
 /* ==========================================================================
 Sliders Style
@@ -275,7 +281,7 @@ Sliders Style
 }
 .btn-default {
   color: #222222;
-  background-color: white;
+  background-color: #ccc;
   border-color: white;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;

@@ -1,17 +1,21 @@
 class ColorsController < ApplicationController
   def index
-    @colors = Color.all
+    @colors = Color.by_code
   end
 
   def new
     @color = Color.new
   end
 
+  def edit
+    @color = Color.find(params[:id])
+  end
+
+
   def create
     @color = Color.new(color_params)
     if @color.save
-      flash[:success] = "The color was added!"
-      redirect_to root_path
+      redirect_to root_path, notice: "The color was added!"
     else
       render 'new'
     end
@@ -20,8 +24,7 @@ class ColorsController < ApplicationController
   def destroy
     @color = Color.find(params[:id])
     @color.destroy
-    flash[:success] = "The color was destroyed."
-    redirect_to root_path
+    redirect_to root_path, notice: "The color was destroyed."
   end
 
   private

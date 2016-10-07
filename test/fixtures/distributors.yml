@@ -1,3 +1,21 @@
+# == Schema Information
+#
+# Table name: distributors
+#
+#  id           :integer          not null, primary key
+#  name         :string
+#  phone        :string
+#  phone2       :string
+#  phone3       :string
+#  mail         :string
+#  website      :string
+#  address      :string
+#  logo_url     :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  country_code :string           not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

@@ -1,0 +1,13 @@
+<%= simple_form_for  [:admin, model] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :phone %>
+    <%= f.input :phone2 %>
+    <%= f.input :phone3 %>
+    <%= f.input :mail %>
+    <%= f.input :website %>
+    <%= f.input :address %>
+    <%= f.input :country_code %>
+    <%= f.input :logo, as: :file %>
+
+    <%= f.button :submit, class: 'btn btn-dark' %>
+<% end %>

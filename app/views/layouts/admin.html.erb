@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>RoseAmor</title>
+    <%= csrf_meta_tags %>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <main class="main">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <div class="sidebar">
+                <nav class="side-nav">
+                  <ul class="side-nav">
+                    <li><%= link_to 'Categories', admin_categories_path %></li>
+                    <li><%= link_to 'Colors', admin_colors_path %></li>
+                    <li><%= link_to 'Distributors', admin_distributors_path %></li>
+                    <li><%= link_to 'Gallery', 'admin_gallery_path' %></li>
+                    <li><%= link_to 'Products', admin_products_path %></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          <div class="col-lg-9 col-md-8">
+           <div class="admin-main">
+             <div class="container">
+               <% flash.each do |key, value| %>
+                   <div class="alert alert-<%= key %>">
+                     <%= value %>
+                   </div>
+               <% end %>
+             </div>
+             <%= yield %>
+           </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="admin-separator"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <p>Copyright &copy; 2016 RoseAmor.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

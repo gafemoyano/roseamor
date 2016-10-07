@@ -1,0 +1,27 @@
+<h3 style="color: black">Colors</h3>
+<div class="admin-separator"></div>
+<%= link_to 'New', new_admin_color_path, class: 'btn btn-dark' %>
+<section class="admin-section">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Code</th>
+      <th>Image</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @colors.each do |color| %>
+        <tr>
+          <td><%= color.code %></td>
+          <td><%= link_to image_tag(color.image.url(:thumb), class: 'img-responsive'), color.image.url, target: '_blank' %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_color_path(color), class: 'btn btn-default'  %>
+            <%= link_to 'Destroy', admin_color_path(color), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+          </td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</section>

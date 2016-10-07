@@ -1,0 +1,16 @@
+<%= simple_form_for  [:admin, model] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :diameter %>
+    <%= f.input :height %>
+    <%= f.association :category %>
+    <%= f.input :image, as: :file %>
+
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+       Current Image
+      </label>
+      <%= link_to(image_tag(model.image.url(:thumb), class: 'img-responsive'), model.image.url, target: '_blank') if model.image %>
+    </div>
+    <%= f.button :submit, class: 'btn btn-dark' %>
+
+<% end %>

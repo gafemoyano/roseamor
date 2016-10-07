@@ -27,6 +27,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'owlcarousel-rails'
 gem 'paperclip', '~> 5.0.0'
+gem 'simple_form'
+gem 'country_select'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
