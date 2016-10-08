@@ -14,9 +14,14 @@
 
 class Color < ApplicationRecord
   has_attached_file :image,
-                    styles: { thumb: ["64x64#", :jpg] }
+                    styles: { thumb: ['200x121#', :jpg],
+                              medium: ['855x519#', :jpg],
+                              original: ['1287x782>', :jpg]},
+                    convert_options: { thumb: '-quality 75 -strip',
+                                       original: '-quality 85 -strip' }
   validates_attachment :image,
-                       content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
+                       content_type: { content_type: ['image/jpeg', 'image/gif', 'image/png', 'image/webp'] }
+
   validates :code, presence: true, uniqueness: true
   validates :image, presence: true
 

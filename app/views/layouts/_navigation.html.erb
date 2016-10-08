@@ -1,5 +1,5 @@
 <section class="main-header no-padding">
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default top-nav-collapse">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -15,11 +15,11 @@
       <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
         <div class="col-md-8 col-xs-12 nav-wrap">
           <ul class="nav navbar-nav">
-            <!--<li><a href="#owl-hero" class="page-scroll">Inicio</a></li>-->
-            <li><a href="#services" class="page-scroll">Services</a></li>
-            <li><a href="#portfolio" class="page-scroll">Products</a></li>
-            <li><a href="#distribuidores" class="page-scroll">Distributors</a></li>
-            <li><a href="#contact" class="page-scroll">Contact</a></li>
+            <li><%=	 link_to 'Home', root_path, class: 'page-scroll' %> </li>
+            <li><%=	 link_to 'Colors', colors_path, class: 'page-scroll' %> </li>
+            <li><%=	 link_to 'Products', products_path, class: 'page-scroll' %> </li>
+            <li><%=	 link_to 'Distributors', "#{root_path}#distributors", class: 'page-scroll' %> </li>
+            <li><%=	 link_to 'Contact', "#{root_path}#contact", class: 'page-scroll' %> </li>
           </ul>
         </div>
         <div class="social-media hidden-sm hidden-xs">

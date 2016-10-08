@@ -27,7 +27,7 @@ class Admin::ColorsController < Admin::ApplicationController
       flash[:success] = 'Color successfully updated'
       redirect_to admin_colors_url
     else
-      flash[:alert] = @color.errors.full_messages.to_sentence
+      flash[:warning] = @color.errors.full_messages.to_sentence
       render :edit
     end
   end

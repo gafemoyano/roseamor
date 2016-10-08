@@ -10,6 +10,7 @@
           <th>Name</th>
           <th>Dimensions</th>
           <th>Picture</th>
+          <th>Package</th>
           <th></th>
         </tr>
         </thead>
@@ -19,6 +20,7 @@
               <td><%= product.name %></td>
               <td><%= product.dimensions %></td>
               <td><%= link_to image_tag(product.image.url(:thumb), class: 'img-responsive'), product.image.url, target: '_blank' %></td>
+              <td><%= link_to image_tag(product.package.url(:thumb), class: 'img-responsive'), product.package.url, target: '_blank' %></td>
               <td>
                 <%= link_to 'Edit', edit_admin_product_path(product), class: 'btn btn-default' %>
                 <%= link_to 'Destroy', admin_product_path(product), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>

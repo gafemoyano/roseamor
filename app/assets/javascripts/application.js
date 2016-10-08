@@ -15,15 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require owl.carousel
+//= require jquery.magnific-popup.js
 //= require_tree .
 
 
-document.addEventListener("turbolinks:load", function() {
-    $(window).scroll(function () {
-        if ($(".navbar").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        }
-    });
-})

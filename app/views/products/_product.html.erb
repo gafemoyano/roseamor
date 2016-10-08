@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="ui slide masked reveal image">
+    <%= image_tag(product.image.url(:original), class: 'visible content') %>
+    <%= image_tag(product.package.url(:original), class: 'hidden content') %>
+  </div>
+  <div class="content">
+    <div class="header"><%= product.name  %> </div>
+    <div class="meta">
+      <a>BIC-18</a>
+    </div>
+    <div class="description">
+      Short product description
+    </div>
+  </div>
+  <div class="extra content">
+      <span class="right floated">
+       <strong> <%= product.dimensions %> </strong>
+      </span>
+      <span>
+        <strong>Dimensions</strong>
+      </span>
+  </div>
+  <div class="extra content">
+      <span class="right floated">
+        <%=	 link_to 'Available in all colors', colors_path %>
+      </span>
+      <span>
+        <strong>Colors</strong>
+      </span>
+  </div>
+</div>
