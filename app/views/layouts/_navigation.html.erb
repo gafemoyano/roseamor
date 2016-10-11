@@ -18,8 +18,8 @@
             <li><%=	 link_to 'Home', root_path, class: 'page-scroll' %> </li>
             <li><%=	 link_to 'Colors', colors_path, class: 'page-scroll' %> </li>
             <li><%=	 link_to 'Products', products_path, class: 'page-scroll' %> </li>
-            <li><%=	 link_to 'Distributors', "#{root_path}#distributors", class: 'page-scroll' %> </li>
-            <li><%=	 link_to 'Contact', "#{root_path}#contact", class: 'page-scroll' %> </li>
+            <li><%=	 link_to 'Distributors', "#{root_path}#distributors", class: 'page-scroll', data:{ turbolinks: false } %> </li>
+            <li><%=	 link_to 'Contact', "#{root_path}#contact", class: 'page-scroll', data:{ turbolinks: false } %> </li>
           </ul>
         </div>
         <div class="social-media hidden-sm hidden-xs">

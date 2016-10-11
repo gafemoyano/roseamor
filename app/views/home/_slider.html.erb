@@ -1,0 +1,31 @@
+<section id="slider" class="no-padding">
+  <div id="owl-hero" class="owl-carousel owl-theme">
+    <%= content_tag :div, class: 'item', style:"background-image: url(#{image_url('sliders/Slide.jpg')})" do %>
+        <div class="caption">
+          <h1><img src="<%=  image_url('logo/logo.png')%>" alt="logo"></h1>
+          <!--<h6>Rosas Preservadas</h6>-->
+          <a class="btn btn-transparent" href="<%="#{root_path}#services"%>" data-turbolinks="false">Learn More</a><a class="btn btn-light" href="<%="#{root_path}#distributors"%>" data-turbolinks="false">Distributors</a>
+        </div>
+    <% end %>
+    <%= content_tag :div, class: 'item', style:"background-image: url(#{image_url('sliders/Slide2.jpg')})" do %>
+        <div class="caption">
+          <h1><img src="<%= image_url('logo/logo.png')%>" alt="logo"></h1>
+          <a class="btn btn-transparent" href="<%="#{root_path}#services"%>" data-turbolinks="false">Learn More</a><a class="btn btn-light" href="<%="#{root_path}#distributors"%>" data-turbolinks="false">Distributors</a>
+        </div>
+    <% end %>
+    <%= content_tag :div, class: 'item', style:"background-image: url(#{image_url('sliders/Slide3.jpg')})" do %>
+        <div class="caption">
+          <h1><img src="<%=  image_url('logo/logo.png')%>" alt="logo"></h1>
+          <!--<h6>Rosas Preservadas</h6>-->
+          <a class="btn btn-transparent" href="<%="#{root_path}#services"%>" data-turbolinks="false">Learn More</a><a class="btn btn-light" href="<%="#{root_path}#distributors"%>" data-turbolinks="false">Distributors</a>
+        </div>
+    <% end %>
+    <%= content_tag :div, class: 'item', style:"background-image: url(#{image_url('sliders/Slide4.jpg')})" do %>
+        <div class="caption">
+          <h1><img src="<%=  image_url('logo/logo.png')%>" alt="logo"></h1>
+          <!--<h6>Rosas Preservadas</h6>-->
+          <a class="btn btn-transparent" href="<%="#{root_path}#services"%>" data-turbolinks="false">Learn More</a><a class="btn btn-light" href="<%="#{root_path}#distributors"%>" data-turbolinks="false">Distributors</a>
+        </div>
+    <% end %>
+  </div>
+</section>

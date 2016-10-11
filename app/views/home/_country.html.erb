@@ -1,0 +1,18 @@
+<div class="col-md-2 col-sm-3">
+  <div class="flag-container ">
+
+    <%= link_to distributors_path(country: country_code), remote: true, class: 'flag-link' do %>
+      <div class="flag-hover">
+        <div class="flag-hover-content">
+          <i class="fa fa-location-arrow fa-3x"></i>
+        </div>
+      </div>
+      <div class="flag-thumbnail">
+        <img src="<%= asset_path("assets/flags/4x3/#{country_code.downcase}.svg") %> " class="img-responsive" alt="">
+      </div>
+    <% end %>
+    <div class="flag-name">
+      <%= ISO3166::Country[country_code] %>
+    </div>
+  </div>
+</div>

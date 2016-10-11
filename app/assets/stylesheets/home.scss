@@ -172,61 +172,18 @@ Sliders Style
     }
   }
 }
+#distributors {
+  background-color: #222;
+  background-image: image-url("map-image.png");
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-.distribuidores-box {
-  position: relative;
-  display: block;
-  max-width: 400px;
-  margin: 0 auto;
-}
-.distribuidores-box .distribuidores-box-caption {
-  color: white;
-  opacity: 0;
-  display: block;
-  background: rgba(36, 36, 42, 0.9);
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-}
-.distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content {
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content .project-category,
-.distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content .project-name {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  padding: 0 15px;
-}
-.distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content .project-category {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 14px;
-}
-.distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content .project-name {
-  font-size: 18px;
-}
-.distribuidores-box:hover .distribuidores-box-caption {
-  opacity: 1;
-}
-.distribuidores-box:focus {
-  outline: none;
-}
-@media (min-width: 768px) {
-  .distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content .project-category {
-    font-size: 16px;
-  }
-  .distribuidores-box .distribuidores-box-caption .distribuidores-box-caption-content .project-name {
-    font-size: 22px;
-  }
-}
 .call-to-action h2 {
   margin: 0 auto 20px;
 }
@@ -481,17 +438,7 @@ Testimonials Style
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-#distribuidores {
-  background-color: #222;
-  background-image: image-url("map-image.png");
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+
 /* ==========================================================================
 Footer Map Style
 ========================================================================== */
@@ -715,6 +662,24 @@ Media Queries Style
     }
     img {
       margin-bottom: 30px;
+      max-width: 200px;
+      display: inline;
+    }
+    .modal-body{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .modal-item-image {
+      max-height: 200px;
+    }
+    .modal-item-content {
+      height: 300px;
+    }
+    .modal-item {
+      flex: 1;
+      padding: 25px;
+      min-width: 350px;
     }
   }
   .close-modal {

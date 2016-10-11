@@ -1,0 +1,52 @@
+<div class="modal-item"><!-- Project Details Go Here -->
+  <div class="modal-item-image">
+    <%= image_tag(distributor.logo.url(:original), class: 'img-responsive') %>
+  </div>
+  <div class="modal-image-content">
+    <h2><%= distributor.name %></h2>
+
+    <% unless distributor.phone.nil? || distributor.phone.empty? %>
+        <p>
+          <strong>Phone: </strong>
+          <%= distributor.phone %>
+        </p>
+    <% end %>
+
+    <% unless distributor.phone2.nil? || distributor.phone2.empty? %>
+        <p>
+          <strong>Phone: </strong>
+          <%= distributor.phone2 %>
+        </p>
+    <% end %>
+
+
+    <% unless distributor.phone3.nil? || distributor.phone3.empty? %>
+        <p>
+          <strong>Phone: </strong>
+          <%= distributor.phone3 %>
+        </p>
+    <% end %>
+
+
+    <% unless distributor.mail.nil? || distributor.mail.empty? %>
+        <p>
+          <strong>E-mail: </strong>
+          <%= distributor.mail %>
+        </p>
+    <% end %>
+
+    <% unless distributor.website.nil? || distributor.website.empty? %>
+        <p>
+          <strong>Website: </strong>
+          <%= link_to distributor.website %>
+        </p>
+    <% end %>
+
+    <% unless distributor.address.nil? || distributor.address.empty? %>
+        <p>
+          <strong>Address: </strong>
+          <%= distributor.address %>
+        </p>
+    <% end %>
+  </div>
+</div>

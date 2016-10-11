@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  resources :distributors, only: [:index]
   resources :products, only: [:index]
   resources :colors, only: [:index]
   resources :photos, only: [:index, :new, :create, :destroy]
