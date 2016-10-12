@@ -83,3 +83,5 @@ production:
   database: roseamor_production
   username: roseamor
   password: <%= ENV['ROSEAMOR_DATABASE_PASSWORD'] %>
+  host: localhost
+  pool: 5
