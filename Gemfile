@@ -30,6 +30,13 @@ gem 'paperclip', '~> 5.0.0'
 gem 'simple_form'
 gem 'country_select'
 
+
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-rvm', github: "capistrano/rvm"
+gem 'capistrano-rails', '~> 1.1.1'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano3-puma',   require: false
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

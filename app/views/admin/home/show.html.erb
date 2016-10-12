@@ -1,0 +1,98 @@
+<h2>Home</h2>
+<div class="admin-separator"></div>
+<%= simple_form_for @home, url: admin_home_create_or_update_path, method: 'post' do |f| %>
+
+    <h3>Slider Images</h3>
+    <%= f.input :slider_image_1, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.slider_image_1.url(:thumb), class: 'img-responsive'), @home.slider_image_1.url, target: '_blank') %>
+    </div>
+    <%= f.input :slider_image_2, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.slider_image_2.url(:thumb), class: 'img-responsive'), @home.slider_image_2.url, target: '_blank') %>
+    </div>
+    <%= f.input :slider_image_3, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.slider_image_3.url(:thumb), class: 'img-responsive'), @home.slider_image_3.url, target: '_blank') %>
+    </div>
+    <%= f.input :slider_image_4, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.slider_image_4.url(:thumb), class: 'img-responsive'), @home.slider_image_4.url, target: '_blank') %>
+    </div>
+
+    <h3>Gallery Images</h3>
+    <%= f.input :gallery_image_1_title%>
+    <%= f.input :gallery_image_1_description %>
+    <%= f.input :gallery_image_1, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.gallery_image_1.url(:thumb), class: 'img-responsive'), @home.gallery_image_1.url, target: '_blank') %>
+    </div>
+    
+    <%= f.input :gallery_image_2_title%>
+    <%= f.input :gallery_image_2_description %>
+    <%= f.input :gallery_image_2, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.gallery_image_2.url(:thumb), class: 'img-responsive'), @home.gallery_image_2.url, target: '_blank') %>
+    </div>
+    
+    <%= f.input :gallery_image_3_title%>
+    <%= f.input :gallery_image_3_description %>
+    <%= f.input :gallery_image_3, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.gallery_image_3.url(:thumb), class: 'img-responsive'), @home.gallery_image_3.url, target: '_blank') %>
+    </div>
+    
+    <%= f.input :gallery_image_4_title%>
+    <%= f.input :gallery_image_4_description %>
+    <%= f.input :gallery_image_4, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.gallery_image_4.url(:thumb), class: 'img-responsive'), @home.gallery_image_4.url, target: '_blank') %>
+    </div>
+    
+    <%= f.input :gallery_image_5_title%>
+    <%= f.input :gallery_image_5_description %>
+    <%= f.input :gallery_image_6, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.gallery_image_6.url(:thumb), class: 'img-responsive'), @home.gallery_image_6.url, target: '_blank') %>
+    </div>
+    
+    
+    <%= f.input :gallery_image_6_title%>
+    <%= f.input :gallery_image_6_description %>
+    <%= f.input :gallery_image_6, as: :file %>
+    <div class="form-group file required product_image">
+      <label class="control-label file required" for="product_image">
+        Current Image
+      </label>
+      <%= link_to(image_tag(@home.gallery_image_6.url(:thumb), class: 'img-responsive'), @home.gallery_image_6.url, target: '_blank') %>
+    </div>
+    
+    <%= f.button :submit, class: 'btn btn-dark', label: 'Update Home' %>
+<% end %>

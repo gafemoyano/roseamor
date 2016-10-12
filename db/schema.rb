@@ -10,12 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161008200228) do
+ActiveRecord::Schema.define(version: 20161011164120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "color_categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -47,6 +53,63 @@ ActiveRecord::Schema.define(version: 20161008200228) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.string   "gallery_image_1_title"
+    t.string   "gallery_image_1_description"
+    t.string   "gallery_image_2_title"
+    t.string   "gallery_image_2_description"
+    t.string   "gallery_image_3_title"
+    t.string   "gallery_image_3_description"
+    t.string   "gallery_image_4_title"
+    t.string   "gallery_image_4_description"
+    t.string   "gallery_image_5_title"
+    t.string   "gallery_image_5_description"
+    t.string   "gallery_image_6_title"
+    t.string   "gallery_image_6_description"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "gallery_image_1_file_name"
+    t.string   "gallery_image_1_content_type"
+    t.integer  "gallery_image_1_file_size"
+    t.datetime "gallery_image_1_updated_at"
+    t.string   "gallery_image_2_file_name"
+    t.string   "gallery_image_2_content_type"
+    t.integer  "gallery_image_2_file_size"
+    t.datetime "gallery_image_2_updated_at"
+    t.string   "gallery_image_3_file_name"
+    t.string   "gallery_image_3_content_type"
+    t.integer  "gallery_image_3_file_size"
+    t.datetime "gallery_image_3_updated_at"
+    t.string   "gallery_image_4_file_name"
+    t.string   "gallery_image_4_content_type"
+    t.integer  "gallery_image_4_file_size"
+    t.datetime "gallery_image_4_updated_at"
+    t.string   "gallery_image_5_file_name"
+    t.string   "gallery_image_5_content_type"
+    t.integer  "gallery_image_5_file_size"
+    t.datetime "gallery_image_5_updated_at"
+    t.string   "gallery_image_6_file_name"
+    t.string   "gallery_image_6_content_type"
+    t.integer  "gallery_image_6_file_size"
+    t.datetime "gallery_image_6_updated_at"
+    t.string   "slider_image_1_file_name"
+    t.string   "slider_image_1_content_type"
+    t.integer  "slider_image_1_file_size"
+    t.datetime "slider_image_1_updated_at"
+    t.string   "slider_image_2_file_name"
+    t.string   "slider_image_2_content_type"
+    t.integer  "slider_image_2_file_size"
+    t.datetime "slider_image_2_updated_at"
+    t.string   "slider_image_3_file_name"
+    t.string   "slider_image_3_content_type"
+    t.integer  "slider_image_3_file_size"
+    t.datetime "slider_image_3_updated_at"
+    t.string   "slider_image_4_file_name"
+    t.string   "slider_image_4_content_type"
+    t.integer  "slider_image_4_file_size"
+    t.datetime "slider_image_4_updated_at"
   end
 
   create_table "photos", force: :cascade do |t|
