@@ -1,26 +1,21 @@
 class Admin::HomeController < Admin::ApplicationController
 
-  def show
-    @home = Home.first_or_initialize
+  def index
+    @home = Home.first_or_create
+    redirect_to edit_admin_home_url @home
   end
 
-  def create_or_update
+  def edit
     @home = Home.first
-    if @home.nil?
-      @home = Home.new home_params
-      if @home.save
-        flash[:success] = 'Home was successfully created.'
-        redirect_to admin_home_url
-      else
-        render :new
-      end
+  end
+
+  def update
+    @home = Home.first
+    if @home.update(home_params)
+      flash[:success] = 'Home was successfully updated.'
+      redirect_to edit_admin_home_url
     else
-      if @home.update(product_params)
-        flash[:success] = 'Product was successfully updated.'
-        redirect_to admin_home_url
-      else
-        render :edit
-      end
+      render :edit
     end
   end
 

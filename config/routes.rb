@@ -10,8 +10,7 @@ Rails.application.routes.draw do
     resources :distributors
     resources :photos
     resources :products
-    get 'home', to: 'home#show'
-    post 'home_create_or_update', to: :create_or_update, controller: 'home'
+    resources :home, only: [:edit, :update, :index]
     # resource :home, controller: 'home'
   end
 

@@ -34,10 +34,14 @@ document.addEventListener('turbolinks:load', function() {
         gallery: {
             enabled: true,
             navigateByImgClick: true,
-            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
         },
         image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                var description = $(item).data('description');
+                return item.el.attr('title');
+            }
         }
     });
 })
