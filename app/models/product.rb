@@ -23,12 +23,14 @@ class Product < ApplicationRecord
   belongs_to :category
   has_attached_file :image,
                     styles: { thumb: ['200x121>', :jpg],
+                              medium: ['855x519#', :jpg],
                               original: ['1287x782>', :jpg]},
                     convert_options: { thumb: '-quality 75 -strip',
                                        original: '-quality 85 -strip' }
 
   has_attached_file :package,
                     styles: { thumb: ['200x121>', :jpg],
+                              medium: ['855x519#', :jpg],
                               original: ['1287x782>', :jpg]},
                     convert_options: { thumb: '-quality 75 -strip',
                                        original: '-quality 85 -strip' },

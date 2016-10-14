@@ -1,0 +1,59 @@
+---
+:Color:
+  :image:
+  - :medium
+  - :original
+  - :thumb
+:Distributor:
+  :logo:
+  - :thumb
+:Home:
+  :gallery_image_1:
+  - :medium
+  - :original
+  - :thumb
+  :gallery_image_2:
+  - :medium
+  - :original
+  - :thumb
+  :gallery_image_3:
+  - :medium
+  - :original
+  - :thumb
+  :gallery_image_4:
+  - :medium
+  - :original
+  - :thumb
+  :gallery_image_5:
+  - :medium
+  - :original
+  - :thumb
+  :gallery_image_6:
+  - :medium
+  - :original
+  - :thumb
+  :slider_image_1:
+  - :medium
+  - :original
+  - :thumb
+  :slider_image_2:
+  - :medium
+  - :original
+  - :thumb
+  :slider_image_3:
+  - :medium
+  - :original
+  - :thumb
+  :slider_image_4:
+  - :medium
+  - :original
+  - :thumb
+:Product:
+  :image:
+  - :medium
+  - :original
+  - :thumb
+  :package:
+  - :medium
+  - :original
+  - :thumb

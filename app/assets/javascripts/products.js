@@ -1,18 +1,20 @@
 document.addEventListener('turbolinks:load', function() {
-
-
-$('.popup-gallery').magnificPopup({
-  delegate: 'a',
-  type: 'image',
-  tLoading: 'Loading image #%curr%...',
-  mainClass: 'mfp-img-mobile',
-  gallery: {
-    enabled: true,
-    navigateByImgClick: true,
-    preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-  },
-  image: {
-    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-  }
-});
+    $('[data-behavior~=popup-gallery]').each(function() { // the containers for all your galleries
+        var image = $(this).data('image');
+        var pkg = $(this).data('package');
+        $(this).magnificPopup({
+            items: [
+                {
+                    src: image
+                },
+                {
+                    src: pkg
+                }
+            ],
+            gallery: {
+                enabled: true
+            },
+            type: 'image' // this is default type
+        });
+    });
 })

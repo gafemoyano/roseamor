@@ -1,7 +1,11 @@
 <div class="card">
-  <div class="ui slide masked reveal image">
-    <%= image_tag(product.image.url(:original), class: 'visible content') %>
-    <%= image_tag(product.package.url(:original), class: 'hidden content') %>
+  <div class="ui slide masked reveal image"
+       data-behavior="popup-gallery"
+       data-image="<%= product.image.url(:original) %>"
+       data-package="<%= product.package.url(:original) %>"
+  >
+      <%= image_tag(product.image.url(:medium), class: 'visible content card-image') %>
+      <%= image_tag(product.package.url(:medium), class: 'hidden content card-image') if product.package? %>
   </div>
   <div class="content">
     <div class="header"><%= product.name  %> </div>
