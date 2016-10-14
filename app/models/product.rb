@@ -47,6 +47,10 @@ class Product < ApplicationRecord
   scope :by_name, -> { order(:name) }
 
   def dimensions
-    "#{self.diameter}cm x #{self.height}cm"
+    if self.diameter.nil? || self.height.nil?
+      "N/A"
+    else
+      "#{self.diameter}cm x #{self.height}cm"
+    end
   end
 end

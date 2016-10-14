@@ -6,10 +6,10 @@
   <div class="content">
     <div class="header"><%= product.name  %> </div>
     <div class="meta">
-      <a>BIC-18</a>
+      <%=	 link_to 'Available in all colors', colors_path %>
     </div>
     <div class="description">
-      Short product description
+      <%= product.description %>
     </div>
   </div>
   <div class="extra content">
@@ -18,14 +18,6 @@
       </span>
       <span>
         <strong>Dimensions</strong>
-      </span>
-  </div>
-  <div class="extra content">
-      <span class="right floated">
-        <%=	 link_to 'Available in all colors', colors_path %>
-      </span>
-      <span>
-        <strong>Colors</strong>
       </span>
   </div>
 </div>

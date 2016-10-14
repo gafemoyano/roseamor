@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013232759) do
+ActiveRecord::Schema.define(version: 20161014134057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -139,6 +139,7 @@ ActiveRecord::Schema.define(version: 20161013232759) do
     t.string   "package_content_type"
     t.integer  "package_file_size"
     t.datetime "package_updated_at"
+    t.text     "description"
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
     t.index ["diameter"], name: "index_products_on_diameter", using: :btree
     t.index ["height"], name: "index_products_on_height", using: :btree
