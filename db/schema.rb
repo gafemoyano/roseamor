@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161013044119) do
+ActiveRecord::Schema.define(version: 20161013232759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20161013044119) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "color_category_id"
+    t.index ["color_category_id"], name: "index_colors_on_color_category_id", using: :btree
   end
 
   create_table "distributors", force: :cascade do |t|
@@ -142,5 +144,6 @@ ActiveRecord::Schema.define(version: 20161013044119) do
     t.index ["height"], name: "index_products_on_height", using: :btree
   end
 
+  add_foreign_key "colors", "color_categories"
   add_foreign_key "products", "categories"
 end

@@ -1,6 +1,7 @@
 class ColorsController < ApplicationController
   def index
     @colors = Color.by_code
+    @color_categories = ColorCategory.by_name
   end
 
   def new
@@ -10,7 +11,6 @@ class ColorsController < ApplicationController
   def edit
     @color = Color.find(params[:id])
   end
-
 
   def create
     @color = Color.new(color_params)
@@ -28,7 +28,6 @@ class ColorsController < ApplicationController
   end
 
   private
-
   def color_params
     params.require(:photo).permit(:image, :title)
   end

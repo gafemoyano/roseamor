@@ -1,4 +1,4 @@
-<div class="col-md-2 col-sm-3 col-xs-3">
+<div class="col-md-2 col-sm-3 col-xs-3" style="margin-top: 10px; margin-bottom: 15px;">
   <%= link_to color.image.url(:original), class: 'color-box' do %>
     <%= image_tag(color.image.url(:medium), class: 'img-responsive') %>
     <div class="color-box-caption">
@@ -9,4 +9,7 @@
       </div>
     </div>
   <% end %>
+  <div class="color-code">
+    <%= color.code %>
+  </div>
 </div>

@@ -13,6 +13,7 @@
 #
 
 class Color < ApplicationRecord
+  belongs_to :color_category
   has_attached_file :image,
                     styles: { thumb: ['200x121#', :jpg],
                               medium: ['855x519#', :jpg],
@@ -24,6 +25,8 @@ class Color < ApplicationRecord
 
   validates :code, presence: true, uniqueness: true
   validates :image, presence: true
+  validates :color_category, presence: true
+
 
   scope :by_code, -> { order(:code) }
 end

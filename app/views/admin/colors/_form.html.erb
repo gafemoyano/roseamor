@@ -1,5 +1,6 @@
   <%= simple_form_for  [:admin, model] do |f| %>
       <%= f.input :code %>
+      <%= f.association :color_category %>
       <%= f.input :image, as: :file %>
       <div class="form-group file required product_image">
         <label class="control-label file required" for="product_image">

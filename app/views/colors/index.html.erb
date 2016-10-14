@@ -1,4 +1,4 @@
-<section id="portfolio">
+<section class="color-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -9,7 +9,7 @@
   </div>
   <div class="container">
     <div class="row no-gutter popup-gallery">
-      <%= render @colors %>
+      <%= render partial: 'color_category', collection: @color_categories %>
     </div>
   </div>
 </section>

@@ -30,6 +30,7 @@ gem 'paperclip', '~> 5.0.0'
 gem 'simple_form'
 gem 'country_select'
 gem 'figaro'
+gem 'mail_form'
 
 
 gem 'capistrano',   require: false

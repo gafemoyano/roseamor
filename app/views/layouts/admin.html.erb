@@ -9,8 +9,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> 'reload' %>
   </head>
 
   <body>
@@ -23,6 +23,7 @@
                   <ul class="side-nav">
                     <li><%= link_to 'Categories', admin_categories_path %></li>
                     <li><%= link_to 'Colors', admin_colors_path %></li>
+                    <li><%= link_to 'Color Categories', admin_color_categories_path %></li>
                     <li><%= link_to 'Distributors', admin_distributors_path %></li>
                     <li><%= link_to 'Home', admin_home_index_path %></li>
                     <li><%= link_to 'Products', admin_products_path %></li>

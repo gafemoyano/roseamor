@@ -1,6 +1,7 @@
 class Admin::ColorsController < Admin::ApplicationController
   def index
     @colors = Color.by_code
+    @color_categories = ColorCategory.by_name
   end
   def new
     @color = Color.new
@@ -43,6 +44,6 @@ class Admin::ColorsController < Admin::ApplicationController
 
   private
     def color_params
-      params.require(:color).permit(:name, :code, :image)
+      params.require(:color).permit(:name, :code, :image, :color_category_id)
     end
 end
