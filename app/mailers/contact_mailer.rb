@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default to: %w(gafemoyano@hotmail.com sales@roseamor.com sales1@roseamor.com natalia@roseamor.com diego@roseamor.com)
+  default to: %w(sales@roseamor.com sales1@roseamor.com natalia@roseamor.com diego@roseamor.com)
 
   def contact_email(contact)
     @contact = contact
