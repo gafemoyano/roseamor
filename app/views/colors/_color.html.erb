@@ -1,5 +1,5 @@
 <div class="col-md-2 col-sm-3 col-xs-3" style="margin-top: 10px; margin-bottom: 15px;">
-  <%= link_to color.image.url(:original), class: 'color-box' do %>
+  <%= link_to color.image.url(:original), class: 'color-box', title: color.code do %>
     <%= image_tag(color.image.url(:medium), class: 'img-responsive') %>
     <div class="color-box-caption">
       <div class="color-box-caption-content">
