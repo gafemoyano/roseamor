@@ -1,2 +1,0 @@
-module Admin::ColorCategoriesHelper
-end

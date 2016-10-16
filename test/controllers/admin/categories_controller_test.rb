@@ -1,28 +1,24 @@
 require 'test_helper'
 
 class Admin::CategoriesControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   test "should get index" do
-    get admin_categories_index_url
+    sign_in users(:one)
+    get admin_categories_url
     assert_response :success
   end
 
   test "should get edit" do
-    get admin_categories_edit_url
-    assert_response :success
-  end
-
-  test "should get destroy" do
-    get admin_categories_destroy_url
-    assert_response :success
-  end
-
-  test "should get update" do
-    get admin_categories_update_url
+    sign_in users(:one)
+    category = categories(:one)
+    get edit_admin_category_url category
     assert_response :success
   end
 
   test "should get new" do
-    get admin_categories_new_url
+    sign_in users(:one)
+    get new_admin_category_url
     assert_response :success
   end
 

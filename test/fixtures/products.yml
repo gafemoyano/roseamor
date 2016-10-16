@@ -17,6 +17,7 @@
 #  package_content_type :string
 #  package_file_size    :integer
 #  package_updated_at   :datetime
+#  description          :text
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

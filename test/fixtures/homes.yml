@@ -62,9 +62,28 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  gallery_image_1_color: MyString
-  gallery_image_1_product: MyString
-
+  gallery_image_1_title:        MyString
+  gallery_image_1_description:  MyString
+  gallery_image_2_title:        MyString
+  gallery_image_2_description:  MyString
+  gallery_image_3_title:        MyString
+  gallery_image_3_description:  MyString
+  gallery_image_4_title:        MyString
+  gallery_image_4_description:  MyString
+  gallery_image_5_title:        MyString
+  gallery_image_5_description:  MyString
+  gallery_image_6_title:        MyString
+  gallery_image_6_description:  MyString
 two:
-  gallery_image_1_color: MyString
-  gallery_image_1_product: MyString
+  gallery_image_1_title:        MyString
+  gallery_image_1_description:  MyString
+  gallery_image_2_title:        MyString
+  gallery_image_2_description:  MyString
+  gallery_image_3_title:        MyString
+  gallery_image_3_description:  MyString
+  gallery_image_4_title:        MyString
+  gallery_image_4_description:  MyString
+  gallery_image_5_title:        MyString
+  gallery_image_5_description:  MyString
+  gallery_image_6_title:        MyString
+  gallery_image_6_description:  MyString

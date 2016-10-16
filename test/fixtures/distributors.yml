@@ -31,7 +31,7 @@ one:
   website: MyString
   address: MyString
   logo_url: MyString
-
+  country_code: 'CO'
 two:
   name: MyString
   phone: MyString
@@ -41,3 +41,4 @@ two:
   website: MyString
   address: MyString
   logo_url: MyString
+  country_code: 'US'

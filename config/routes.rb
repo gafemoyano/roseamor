@@ -10,8 +10,7 @@ Rails.application.routes.draw do
     resources :colors
     resources :color_categories
     resources :distributors
-    resources :photos
-    resources :products
+      resources :products
     resources :home, only: [:edit, :update, :index]
     # resource :home, controller: 'home'
   end
