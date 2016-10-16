@@ -31,6 +31,7 @@ gem 'simple_form'
 gem 'country_select'
 gem 'figaro'
 gem 'mail_form'
+gem 'devise'
 
 
 gem 'capistrano',   require: false
