@@ -16,12 +16,14 @@
       <%= product.description %>
     </div>
   </div>
-  <div class="extra content">
+  <% if product.dimensions? %>
+    <div class="extra content">
       <span class="right floated">
        <strong> <%= product.dimensions %> </strong>
       </span>
       <span>
         <strong>Dimensions</strong>
       </span>
-  </div>
+    </div>
+  <% end %>
 </div>
