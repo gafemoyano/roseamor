@@ -144,8 +144,8 @@ Sliders Style
         color: $Light-primary;
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 27px;
-        line-height: 27px;
+        font-size: 20px;
+        line-height: 20px;
         padding-bottom: 5px;
         letter-spacing: 1px;
       }
@@ -163,10 +163,11 @@ Sliders Style
     .portfolio-box-caption {
       .portfolio-box-caption-content {
         .project-category {
-          font-size: 20px;
+          font-size: 18px;
         }
         .project-name {
-          font-size: 40px;
+          font-size: 30px;
+          line-height: 30px;
         }
       }
     }
