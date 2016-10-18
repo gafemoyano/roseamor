@@ -10,8 +10,13 @@
   <div class="content">
     <div class="header"><%= product.name  %> </div>
     <div class="meta">
+    <% if product.all_colors %>
       <%=	 link_to 'Available in all colors', colors_path %>
+    <% else%>
+      <%=	 link_to 'Ask for available colors', root_path(anchor: 'contact'), data:{ turbolinks: false } %>
+    <% end %>
     </div>
+
     <div class="description">
       <%= product.description %>
     </div>

@@ -18,6 +18,7 @@
 #  package_file_size    :integer
 #  package_updated_at   :datetime
 #  description          :text
+#  all_colors           :boolean          default(TRUE), not null
 #
 
 class Product < ApplicationRecord

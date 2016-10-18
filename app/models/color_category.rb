@@ -6,6 +6,7 @@
 #  name       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  order      :integer          default(99), not null
 #
 
 class ColorCategory < ApplicationRecord
