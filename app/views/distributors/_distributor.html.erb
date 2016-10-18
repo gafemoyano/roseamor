@@ -31,14 +31,14 @@
     <% unless distributor.mail.nil? || distributor.mail.empty? %>
         <p>
           <strong>E-mail: </strong>
-          <%= distributor.mail %>
+          <%= mail_to distributor.mail %>
         </p>
     <% end %>
 
     <% unless distributor.website.nil? || distributor.website.empty? %>
         <p>
           <strong>Website: </strong>
-          <%= link_to distributor.website %>
+          <%= link_to url_with_protocol(distributor.website), url_with_protocol(distributor.website), target: '_blank' %>
         </p>
     <% end %>
 
