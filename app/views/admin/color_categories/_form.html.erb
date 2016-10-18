@@ -1,4 +1,5 @@
 <%= simple_form_for  [:admin, model] do |f| %>
+    <%= f.input :order %>
     <%= f.input :name %>
     <%= f.button :submit, class: 'btn btn-dark' %>
 <% end %>

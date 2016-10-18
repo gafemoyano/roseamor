@@ -5,6 +5,7 @@
   <table class="table">
     <thead>
     <tr>
+      <th>Order</th>
       <th>Name</th>
       <th></th>
     </tr>
@@ -12,6 +13,7 @@
     <tbody>
     <% @categories.each do |category| %>
         <tr>
+          <td><%= category.order %></td>
           <td><%= category.name %></td>
           <td>
             <%= link_to 'Edit', edit_admin_category_path(category), class: 'btn btn-default'  %>

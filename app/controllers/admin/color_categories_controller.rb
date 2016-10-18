@@ -42,6 +42,6 @@ class Admin::ColorCategoriesController < Admin::ApplicationController
 
   private
   def color_category_params
-    params.require(:color_category).permit(:name)
+    params.require(:color_category).permit(:name, :order)
   end
 end

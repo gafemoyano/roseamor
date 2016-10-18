@@ -12,6 +12,7 @@
     <tbody>
     <% @color_categories.each do |category| %>
         <tr>
+          <td><%= category.order %></td>
           <td><%= category.name %></td>
           <td>
             <%= link_to 'Edit', edit_admin_color_category_path(category), class: 'btn btn-default'  %>

@@ -1,6 +1,6 @@
 class Admin::ProductsController < Admin::ApplicationController
   def index
-    @categories = Category.by_name
+    @categories = Category.by_priority
   end
 
   def new

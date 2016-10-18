@@ -1,7 +1,7 @@
 class Admin::ColorsController < Admin::ApplicationController
   def index
     @colors = Color.by_code
-    @color_categories = ColorCategory.by_name
+    @color_categories = ColorCategory.by_priority
   end
   def new
     @color = Color.new

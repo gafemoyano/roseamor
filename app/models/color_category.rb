@@ -12,5 +12,6 @@ class ColorCategory < ApplicationRecord
   has_many :colors
 
   validates :name, presence: true, uniqueness: true
-  scope :by_name, -> {order :name }
+  validates :order, presence: true
+  scope :by_priority, -> {order order: :asc, name: :asc }
 end
