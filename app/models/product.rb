@@ -51,7 +51,7 @@ class Product < ApplicationRecord
   scope :by_name, -> { order(:name) }
 
   def dimensions
-    "H #{self.height}cm x D #{self.diameter}cm"
+    "H#{self.height}cm x D#{self.diameter}cm"
   end
 
   def dimensions?
