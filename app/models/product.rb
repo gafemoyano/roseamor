@@ -54,6 +54,10 @@ class Product < ApplicationRecord
     "H#{self.height}cm x D#{self.diameter}cm"
   end
 
+  def dimensions_inches
+    "H#{(self.height/2.54).round(3)}in x D#{(self.diameter/2.54).round(3)}in"
+  end
+
   def dimensions?
     if self.diameter.nil? || self.height.nil?
       false
