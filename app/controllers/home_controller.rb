@@ -11,7 +11,7 @@ class HomeController < ApplicationController
     if @contact.valid?
       ContactMailer.contact_email(@contact).deliver
       flash[:success] = 'Thank you for your message. We will contact you soon!'
-      render "#{root_url}#contact"
+      render :index
     else
       @country_codes = Distributor.country_codes_by_name
       @home = Home.first_or_create
