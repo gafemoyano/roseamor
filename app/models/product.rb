@@ -20,46 +20,50 @@
 #  description          :text
 #  all_colors           :boolean          default(TRUE), not null
 #
-
 class Product < ApplicationRecord
   belongs_to :category
   has_attached_file :image,
                     styles: { thumb: ['200x121>', :jpg],
                               medium: ['855x519#', :jpg],
-                              original: ['1287x782>', :jpg]},
+                              original: ['1287x782>', :jpg] },
                     convert_options: { thumb: '-quality 75 -strip',
                                        original: '-quality 85 -strip' }
 
   has_attached_file :package,
                     styles: { thumb: ['200x121>', :jpg],
                               medium: ['855x519#', :jpg],
-                              original: ['1287x782>', :jpg]},
+                              original: ['1287x782>', :jpg] },
                     convert_options: { thumb: '-quality 75 -strip',
                                        original: '-quality 85 -strip' },
-                    :default_url => '/images/:style/missing.png'
-
+                    default_url: '/images/:style/missing.png'
 
   validates_attachment :image,
-                       content_type: { content_type: ['image/jpeg', 'image/gif', 'image/png', 'image/webp'] }
+                       content_type: { content_type: ['image/jpeg',
+                                                      'image/gif',
+                                                      'image/png',
+                                                      'image/webp'] }
 
   validates_attachment :package,
-                       content_type: { content_type: ['image/jpeg', 'image/gif', 'image/png', 'image/webp'] }
+                       content_type: { content_type: ['image/jpeg',
+                                                      'image/gif',
+                                                      'image/png',
+                                                      'image/webp'] }
   validates :category, presence: true
   validates :name, presence: true, uniqueness: true
   validates :image, presence: true
 
-  scope :by_name, -> { order(:name) }
+  scope :by_name, (-> { order(:name) })
 
   def dimensions
-    "H #{self.height}cm x D #{self.diameter}cm"
+    "H #{height}cm x D #{diameter}cm"
   end
 
   def dimensions_inches
-    "H #{(self.height/2.54).round(1)}in x D #{(self.diameter/2.54).round(1)}in"
+    "H #{(height / 2.54).round(1)}in x D #{(diameter / 2.54).round(1)}in"
   end
 
   def dimensions?
-    if self.diameter.nil? || self.height.nil?
+    if diameter.nil? || height.nil?
       false
     else
       true

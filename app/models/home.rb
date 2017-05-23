@@ -58,13 +58,11 @@
 #  slider_image_4_file_size     :integer
 #  slider_image_4_updated_at    :datetime
 #
-
 class Home < ApplicationRecord
-
   has_attached_file :gallery_image_1,
                     styles: { thumb: ['200x121#', :jpg],
                               medium: ['855x519#', :jpg],
-                              original: ['1287x782>', :jpg]},
+                              original: ['1287x782>', :jpg] },
                     convert_options: { thumb: '-quality 75 -strip',
                                        original: '-quality 85 -strip' }
   validates_attachment :gallery_image_1,

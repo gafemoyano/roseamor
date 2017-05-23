@@ -10,9 +10,9 @@
 #
 
 class Category < ApplicationRecord
-  has_many :products
+  has_many :products, dependent: :destroy
 
   validates :name, presence: true, uniqueness: true
   validates :order, presence: true
-  scope :by_priority, -> {order order: :asc, name: :asc }
+  scope :by_priority, -> { order order: :asc, name: :asc }
 end

@@ -21,6 +21,7 @@ class HomeController < ApplicationController
   end
 
   private
+
   def contact_params
     params.require(:contact).permit(:name, :email, :country, :message, :city)
   end
