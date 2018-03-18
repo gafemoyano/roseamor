@@ -1,4 +1,4 @@
-lock '3.9.0'
+lock '3.10.1'
 # Change these
 server '159.203.161.124', port: 22, roles: [:web, :app, :db], primary: true
 
