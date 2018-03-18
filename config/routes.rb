@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     resources :colors
     resources :color_categories
     resources :distributors
-      resources :products
+    resources :faqs
+    resources :products
     resources :home, only: [:edit, :update, :index]
     # resource :home, controller: 'home'
   end
@@ -18,5 +19,6 @@ Rails.application.routes.draw do
   resources :distributors, only: [:index]
   resources :photos, only: [:index, :new, :create, :destroy]
   resources :products, only: [:index]
+  resources :faqs, only: [:index]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

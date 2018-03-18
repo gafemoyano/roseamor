@@ -1,0 +1,23 @@
+<section class="faqs-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">FAQ</h2>
+        <hr class="primary">
+        <p>Common questions from our customers</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <%= render @faqs %>
+    <div class="faq-box">
+      <div class="faq-title">
+        <h3><%= "Is your question not here?" %></h3>
+      </div>
+      <br />
+      <div class="faq-response">
+        <%= link_to 'Contact us via email.', root_path(anchor: 'contact'), class: 'btn btn-dark', data: {turbolinks: false} %>
+      </div>
+    </div>
+  </div>
+</section>

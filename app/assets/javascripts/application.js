@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require owl.carousel
 //= require jquery.magnific-popup.js
+//= require trix
+
+
 //= require_tree .
-
-

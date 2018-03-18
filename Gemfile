@@ -11,8 +11,6 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -33,6 +31,7 @@ gem 'figaro'
 gem 'mail_form'
 gem 'devise'
 gem 'rubocop', '~> 0.53.0', require: false
+gem 'trix'
 
 
 gem 'capistrano',   require: false

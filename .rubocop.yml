@@ -455,7 +455,7 @@ Style/MultipleComparison:
 
 # This cop checks whether some constant value isn't a
 # mutable literal (e.g. array or hash).
-Style/MutableConstant:
+Layout/MutableConstant:
   Enabled: true
   Exclude:
     - 'db/migrate/**/*'
@@ -545,11 +545,6 @@ Style/StringMethods:
 # Use %i or %I for arrays of symbols.
 Style/SymbolArray:
   Enabled: false
-
-# This cop checks for trailing comma in array and hash literals.
-Style/TrailingCommaInLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: no_comma
 
 # This cop checks for trailing comma in argument lists.
 Style/TrailingCommaInArguments:
@@ -673,7 +668,7 @@ Lint/AssignmentInCondition:
   Enabled: false
 
 # Align block ends correctly.
-Lint/BlockAlignment:
+Layout/BlockAlignment:
   Enabled: true
 
 # Default values in optional keyword arguments and optional ordinal arguments
@@ -682,7 +677,7 @@ Lint/CircularArgumentReference:
   Enabled: true
 
 # Checks for condition placed in a confusing position relative to the keyword.
-Lint/ConditionPosition:
+Layout/ConditionPosition:
   Enabled: true
 
 # Check for debugger calls.
@@ -690,7 +685,7 @@ Lint/Debugger:
   Enabled: true
 
 # Align ends corresponding to defs correctly.
-Lint/DefEndAlignment:
+Layout/DefEndAlignment:
   Enabled: true
 
 # Check for deprecated class method calls.

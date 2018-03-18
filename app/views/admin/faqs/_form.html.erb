@@ -1,0 +1,11 @@
+<%= simple_form_for [:admin, model] do |f| %>
+  <%= f.input :order %>
+
+  <%= f.input :question %>
+
+  <%= f.label :answer %>
+  <%= f.trix_editor :answer %>
+
+  <br />
+  <%= f.button :submit, class: 'btn btn-dark' %>
+<% end %>

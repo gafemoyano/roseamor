@@ -1,0 +1,28 @@
+<h3 style="color: black">Frequently Asked Questions</h3>
+<div class="admin-separator"></div>
+<%= link_to 'New', new_admin_faq_path, class: 'btn btn-dark' %>
+<section class="admin-section">
+
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Order</th>
+          <th colspan="2">Question</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @faqs.each do |faq| %>
+            <tr>
+              <td><%= faq.order %></td>
+              <td colspan="2"><%= faq.question %></td>
+              <td>
+                <%= link_to 'Edit', edit_admin_faq_path(faq), class: 'btn btn-default' %>
+                <%= link_to 'Destroy', admin_faq_path(faq), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?'} %>
+              </td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+</section>
