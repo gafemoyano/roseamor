@@ -32,6 +32,7 @@ gem 'country_select'
 gem 'figaro'
 gem 'mail_form'
 gem 'devise'
+gem 'rubocop', '~> 0.53.0', require: false
 
 
 gem 'capistrano',   require: false
