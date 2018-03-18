@@ -1,4 +1,4 @@
-<% cache(["faq_list", @faqs.map(&:id), @faqs.maximum(:updated_at)]) do %>
+<% cache(@faqs) do %>
   <section class="faqs-section">
     <div class="container">
       <div class="row">
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="container">
-      <%= render @faqs %>
+      <%= render partial: 'faqs/faq', collection: @faqs, cached: true %>
       <div class="faq-box">
         <div class="faq-title">
           <h3><%= "Do you have any other questions" %></h3>

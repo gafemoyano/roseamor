@@ -1,12 +1,10 @@
-<% cache faq do %>
-  <div class="faq-box">
-    <div class="faq-title">
-      <h3><%= "#{faq.question}?" %></h3>
-    </div>
-    <br/>
-    <div class="faq-response">
-      <%= sanitize faq.answer %>
-    </div>
+<div class="faq-box">
+  <div class="faq-title">
+    <h3><%= "#{faq.question}?" %></h3>
   </div>
-<% end %>
+  <br/>
+  <div class="faq-response">
+    <%= sanitize faq.answer %>
+  </div>
+</div>
 
