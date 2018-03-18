@@ -1,7 +1,9 @@
-<div class="category-row">
-  <h4><%= color_category.name %></h4>
-  <div class="admin-separator"></div>
-  <div class="ui four cards">
-    <%= render color_category.colors.by_code %>
+<% cache(color_category) do %>
+  <div class="category-row">
+    <h4><%= color_category.name %></h4>
+    <div class="admin-separator"></div>
+    <div class="ui four cards">
+      <%= render partial: 'colors/color', collection: color_category.colors.by_code, cached: true %>
+    </div>
   </div>
-</div>
+<% end %>

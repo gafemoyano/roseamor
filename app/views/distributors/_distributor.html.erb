@@ -1,52 +1,54 @@
-<div class="modal-item"><!-- Project Details Go Here -->
-  <div class="modal-item-image">
-    <%= image_tag(distributor.logo.url(:original), class: 'img-responsive') %>
-  </div>
-  <div class="modal-image-content">
-    <h2><%= distributor.name %></h2>
+<% cache(distributor) do %>
+  <div class="modal-item">
+    <div class="modal-item-image">
+      <%= image_tag(distributor.logo.url(:original), class: 'img-responsive') %>
+    </div>
+    <div class="modal-image-content">
+      <h2><%= distributor.name %></h2>
 
-    <% unless distributor.phone.nil? || distributor.phone.empty? %>
+      <% unless distributor.phone.nil? || distributor.phone.empty? %>
         <p>
           <strong>Phone: </strong>
           <%= distributor.phone %>
         </p>
-    <% end %>
+      <% end %>
 
-    <% unless distributor.phone2.nil? || distributor.phone2.empty? %>
+      <% unless distributor.phone2.nil? || distributor.phone2.empty? %>
         <p>
           <strong>Phone: </strong>
           <%= distributor.phone2 %>
         </p>
-    <% end %>
+      <% end %>
 
 
-    <% unless distributor.phone3.nil? || distributor.phone3.empty? %>
+      <% unless distributor.phone3.nil? || distributor.phone3.empty? %>
         <p>
           <strong>Phone: </strong>
           <%= distributor.phone3 %>
         </p>
-    <% end %>
+      <% end %>
 
 
-    <% unless distributor.mail.nil? || distributor.mail.empty? %>
+      <% unless distributor.mail.nil? || distributor.mail.empty? %>
         <p>
           <strong>E-mail: </strong>
           <%= mail_to distributor.mail %>
         </p>
-    <% end %>
+      <% end %>
 
-    <% unless distributor.website.nil? || distributor.website.empty? %>
+      <% unless distributor.website.nil? || distributor.website.empty? %>
         <p>
           <strong>Website: </strong>
           <%= link_to url_with_protocol(distributor.website), url_with_protocol(distributor.website), target: '_blank' %>
         </p>
-    <% end %>
+      <% end %>
 
-    <% unless distributor.address.nil? || distributor.address.empty? %>
+      <% unless distributor.address.nil? || distributor.address.empty? %>
         <p>
           <strong>Address: </strong>
           <%= distributor.address %>
         </p>
-    <% end %>
+      <% end %>
+    </div>
   </div>
-</div>
+<% end %>

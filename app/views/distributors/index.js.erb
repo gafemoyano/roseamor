@@ -1,4 +1,4 @@
 $('#portfolioModal').find('.modal-body')
-    .html("<%= escape_javascript(render @distributors) %>")
+    .html("<%= escape_javascript(render partial: 'distributors/distributor.html.erb', collection: @distributors, cached: true) %>")
 
 $('#portfolioModal').modal()

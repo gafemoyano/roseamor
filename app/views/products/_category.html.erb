@@ -2,6 +2,6 @@
   <h4><%= category.name %></h4>
   <div class="admin-separator"></div>
   <div class="ui four stackable cards">
-    <%= render category.products.by_name %>
+    <%= render partial: 'products/product', collection: category.products.by_name, cached: true %>
   </div>
 </div>

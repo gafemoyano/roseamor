@@ -1,23 +1,24 @@
-<section class="color-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h2 class="section-heading">Colors</h2>
-        <hr class="primary">
-        <p>Our Preserved Roses Color Palette</p>
+<% cache(@color_categories) do %>
+  <section class="color-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Colors</h2>
+          <hr class="primary">
+          <p>Our Preserved Roses Color Palette</p>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row no-gutter popup-gallery">
-      <%= render partial: 'color_category', collection: @color_categories %>
+    <div class="container">
+      <div class="row no-gutter popup-gallery">
+        <%= render partial: 'color_category', collection: @color_categories %>
+      </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <a class="btn btn-dark" href="<%="#{root_path anchor: 'distributors'}"%>">Find Distributors</a>
-      <a class="btn btn-dark" href="<%="#{root_path anchor: 'contact'}"%>" data-turbolinks="false">Contact Us</a>
+    <div class="container">
+      <div class="row">
+        <a class="btn btn-dark" href="<%= "#{root_path anchor: 'distributors'}" %>">Find Distributors</a>
+        <a class="btn btn-dark" href="<%= "#{root_path anchor: 'contact'}" %>" data-turbolinks="false">Contact Us</a>
+      </div>
     </div>
-  </div>
-
-</section>
+  </section>
+<% end %>

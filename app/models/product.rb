@@ -21,7 +21,7 @@
 #  all_colors           :boolean          default(TRUE), not null
 #
 class Product < ApplicationRecord
-  belongs_to :category
+  belongs_to :category, touch: true
   has_attached_file :image,
                     styles: { thumb: ['200x121>', :jpg],
                               medium: ['855x519#', :jpg],

@@ -14,7 +14,7 @@
 #
 
 class Color < ApplicationRecord
-  belongs_to :color_category
+  belongs_to :color_category, touch: true
   has_attached_file :image,
                     styles: { thumb: ['200x121#', :jpg],
                               medium: ['855x519#', :jpg],
