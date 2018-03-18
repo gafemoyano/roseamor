@@ -14,10 +14,10 @@
 
 one:
   question: MyText
-  answer: MyText
+  answer: "<div> this is an escaped html string </div?"
   order: 1
 
 two:
   question: MyText
-  answer: MyText
+  answer: "<div> this is an escaped html string </div?"
   order: 1
