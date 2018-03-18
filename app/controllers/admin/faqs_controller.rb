@@ -38,7 +38,7 @@ class Admin::FaqsController < Admin::ApplicationController
     @faq = Faq.find params[:id]
     @faq.destroy
     flash[:success] = 'Faq was successfully destroyed'
-    redirect_to admin_faq_url
+    redirect_to admin_faqs_url
   end
 
   private
