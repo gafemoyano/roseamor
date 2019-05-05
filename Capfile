@@ -14,4 +14,4 @@ install_plugin Capistrano::SCM::Git
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
 
 set :rvm_type, :user                     # Defaults to: :auto
-set :rvm_ruby_version,'2.5.0'
+set :rvm_ruby_version,'2.6.3'
