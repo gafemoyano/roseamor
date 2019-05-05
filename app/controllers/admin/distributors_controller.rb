@@ -46,6 +46,6 @@ class Admin::DistributorsController < Admin::ApplicationController
     params.require(:distributor).permit(
         :name, :phone, :phone2, :phone3,
         :mail, :website, :address, :logo,
-        :country_code)
+        :country_code, :order)
   end
 end

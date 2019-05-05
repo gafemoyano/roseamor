@@ -7,6 +7,7 @@
         <thead>
         <tr>
           <th>Country</th>
+          <th>Order</th>
           <th>Name</th>
           <th>Phone</th>
           <th>Phone2</th>
@@ -22,6 +23,7 @@
         <% @distributors.each do |distributor| %>
             <tr>
               <td><%= distributor.country_name %></td>
+              <td><%= distributor.order %></td>
               <td><%= distributor.name %></td>
               <td><%= distributor.phone %></td>
               <td><%= distributor.phone2 %></td>

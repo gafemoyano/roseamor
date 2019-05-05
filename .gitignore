@@ -15,9 +15,12 @@
 .idea/
 .vagrant/
 /cookbooks
-
+/public/system
 # Ignore Byebug command history file.
 .byebug_history
+
+.idea/
+.vagrant/
 
 # Ignore application configuration
 /config/application.yml

@@ -1,6 +1,6 @@
 class DistributorsController < ApplicationController
   def index
-    @distributors = Distributor.where(nil) # creates an anonymous scope
+    @distributors = Distributor.by_priority # creates an anonymous scope
     @distributors = @distributors.country(params[:country]) if params[:country].present?
 
     respond_to do | format|

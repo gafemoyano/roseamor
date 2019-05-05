@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180318142250) do
+ActiveRecord::Schema.define(version: 2019_05_05_053042) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20180318142250) do
     t.string "logo_content_type"
     t.integer "logo_file_size"
     t.datetime "logo_updated_at"
+    t.integer "order", default: 0, null: false
     t.index ["name"], name: "index_distributors_on_name"
   end
 

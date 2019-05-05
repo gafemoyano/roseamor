@@ -30,11 +30,13 @@ class Distributor < ApplicationRecord
 
   validates :name, presence: true
   validates :country_code, presence: true
+  validates :order, uniqueness: { scope: :country_code }
 
-  scope :by_name, ->{ order(:name)}
-  scope :by_country, ->{ all.sort_by { |dist| dist.country_name}}
-  scope :unique_country_codes, ->{ distinct(:country_code).pluck(:country_code).sort! }
+  scope :by_name, -> { order(:name) }
+  scope :by_country, -> { all.sort_by { |dist| dist.country_name } }
+  scope :unique_country_codes, -> { distinct(:country_code).pluck(:country_code).sort! }
   scope :country, -> (country_code) { where country_code: country_code }
+  scope :by_priority, -> { order order: :asc, name: :asc }
 
   def country_name
     country = ISO3166::Country[country_code]
@@ -48,8 +50,8 @@ class Distributor < ApplicationRecord
 
   def self.country_codes_by_name
     unique_country_codes
-        .map{|code| {code: code, name: country_name(code)}}
-        .sort_by { |elem| elem[:name]}
-        .map { |elem| elem[:code]}
+      .map { |code| { code: code, name: country_name(code) } }
+      .sort_by { |elem| elem[:name] }
+      .map { |elem| elem[:code] }
   end
 end

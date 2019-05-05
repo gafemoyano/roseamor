@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Roseamor
   class Application < Rails::Application
+    config.load_defaults 5.0
 
     config.action_mailer.default_url_options = { host: '159.203.161.124', port: 80 }
 
@@ -22,6 +23,5 @@ module Roseamor
         :user_name => ENV['gmail_username'],
         :password  => ENV['gmail_password']
     }
-
   end
 end
