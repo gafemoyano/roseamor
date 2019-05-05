@@ -1,4 +1,4 @@
-class AddAttachmentPackageToProducts < ActiveRecord::Migration
+class AddAttachmentPackageToProducts < ActiveRecord::Migration[5.0]
   def self.up
     change_table :products do |t|
       t.attachment :package

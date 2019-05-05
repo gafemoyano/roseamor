@@ -1,4 +1,4 @@
-class AddAttachmentGalleryImage1ToHomes < ActiveRecord::Migration
+class AddAttachmentGalleryImage1ToHomes < ActiveRecord::Migration[5.0]
   def self.up
     change_table :homes do |t|
       t.attachment :gallery_image_1

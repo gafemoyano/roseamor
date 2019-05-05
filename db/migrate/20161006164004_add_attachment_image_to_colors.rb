@@ -1,4 +1,4 @@
-class AddAttachmentImageToColors < ActiveRecord::Migration
+class AddAttachmentImageToColors < ActiveRecord::Migration[5.0]
   def self.up
     change_table :colors do |t|
       t.attachment :image

@@ -19,4 +19,4 @@ one:
   code: MyString
 
 two:
-  code: MyString
+  code: other

@@ -28,5 +28,5 @@ one:
   category: one
 
 two:
-  name: MyString
+  name: other
   category: two
