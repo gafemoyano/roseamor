@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
+ruby '2.6.3'
 
 
-gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 5.2.0'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
@@ -20,8 +21,7 @@ gem 'figaro'
 gem 'mail_form'
 gem 'devise'
 gem 'rubocop', '~> 0.53.0', require: false
-gem 'trix'
-
+gem 'trix-rails', require: 'trix'
 
 gem 'capistrano',   require: false
 gem 'capistrano-rvm',   require: false
