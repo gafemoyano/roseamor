@@ -27,7 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'country_select', '~> 4.0'
 gem 'figaro'
 gem 'mail_form', '~> 1.7'
-gem 'devise', '~> 4.6'
+gem 'devise', '~> 4.7'
 gem 'rubocop', '~> 0.53.0', require: false
 gem 'trix-rails', require: 'trix'
 
