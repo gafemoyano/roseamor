@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.6.3'
 
 gem 'bootsnap', require: false
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 gem 'capistrano', require: false
 gem 'capistrano-rvm', require: false
