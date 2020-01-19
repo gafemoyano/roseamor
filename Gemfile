@@ -1,22 +1,29 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-
-gem 'rails', '~> 5.2.0'
-gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'jquery-rails'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', require: false
-
 gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'capistrano', require: false
+gem 'capistrano-rvm', require: false
+gem 'capistrano-rails', require: false
+gem 'capistrano-bundler', require: false
+gem 'capistrano3-puma', require: false
+
 gem 'font-awesome-sass', '~> 4.6.2'
+gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
+
 gem 'owlcarousel-rails', '~> 1.1', '>= 1.1.3.3'
+gem 'pg', '~> 0.18'
 gem 'paperclip', '~> 6.1'
+gem 'puma', '~> 3.7'
+gem 'rails', '~> 5.2.0'
+gem 'sass-rails', '~> 5.0'
 gem 'simple_form', '~> 4.1'
+gem 'turbolinks', '~> 5'
+gem 'uglifier', '>= 1.3.0'
+
 gem 'country_select', '~> 4.0'
 gem 'figaro'
 gem 'mail_form', '~> 1.7'
@@ -24,11 +31,7 @@ gem 'devise', '~> 4.6'
 gem 'rubocop', '~> 0.53.0', require: false
 gem 'trix-rails', require: 'trix'
 
-gem 'capistrano', require: false
-gem 'capistrano-rvm', require: false
-gem 'capistrano-rails', require: false
-gem 'capistrano-bundler', require: false
-gem 'capistrano3-puma', require: false
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

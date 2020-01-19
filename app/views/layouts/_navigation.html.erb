@@ -21,6 +21,9 @@
             <li class="<%= 'active' if current_page?("#{root_path}#distributors") %>"><%= link_to 'Distributors', root_path(anchor: 'distributors') %> </li>
             <li class="<%= 'active' if current_page?("#{root_path}#contact") %>"><%= link_to 'Contact', root_path(anchor: 'contact'), data: { turbolinks: false } %> </li>
             <li class="<%= 'active' if current_page?(faqs_path) %>"><%= link_to 'FAQ', faqs_path %> </li>
+            <li class="responsive-login-button">
+              <a href="http://3.20.63.246/RoseAmor/Extlogin.aspx">LOGIN</a>
+            </li>
           </ul>
         </div>
         <div class="social-media hidden-sm hidden-xs">
@@ -29,6 +32,11 @@
             <li><a href="https://www.instagram.com/roseamoremi"><i class="fa fa-instagram"></i></a></li>
             <li><a href="https://twitter.com/roseamor2011"><i class="fa fa-twitter"></i></a></li>
           </ul>
+          <div class="nav navbar-nav">
+            <div class="login-container">
+              <a class="login-button" href="http://3.20.63.246/RoseAmor/Extlogin.aspx">Login</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
